@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "constants/index.js", "app/membership/page.js", "app/home/page.js", "constants/index.js", "app/home/SliderPane.tsx"],
   "exclude": ["node_modules"]
 }

@@ -1,0 +1,50 @@
+
+import MMNButton from "@/components/Button";
+
+interface Props {
+    className?:string, 
+    event: {
+        title: string,
+        year: string,
+        date: string,
+        address: string,
+        description: string
+    }
+}
+
+export default function InfoCard(params:Props){
+    return (
+            <div className={`${params.className} w-full p-0 flex flex-col gap-[14px] text-white`}>
+                <div>
+                    <MMNButton title="Upcoming event" className="text-[#00205B] bg-white" size="small"/>
+                </div>
+                
+                <div className="flex gap-[10px] text-[34px] leading-[51px]">
+                    <h1 className="font-bold"> {params.event.title} </h1>
+                    <h1 className="font-normal"> {params.event.year} </h1>
+                </div>
+
+                <div className="flex gap-[10px] leading-[21px] items-center flex-wrap">
+                    <span className="">Date: </span>
+                    <span className="font-bold"> {params.event.date} </span>
+                    <div>
+                        <MMNButton title="The date is tentative. Stay tuned for further details..." className="text-[#00205B] bg-white" size="small"/>
+                    </div>
+                </div>
+
+                <div className="flex gap-[10px] leading-[21px]">
+                    <span className="">Address: </span>
+                    <span className="font-bold"> {params.event.address} </span>
+                </div>
+
+                <div className="leading-[28px]">
+                    {params.event.description}
+                </div>
+
+                <div className="flex gap-[20px]">
+                    <MMNButton title="Learn more" className="border-[1px] border-white text-white" size="normal"/>
+                    <MMNButton title="Register for event now" className="text-white bg-[#00205B]" size="normal"/>
+                </div>
+            </div>
+    )
+}
