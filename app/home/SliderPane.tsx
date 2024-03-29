@@ -6,7 +6,6 @@ import InfoCard from "./InfoCard";
 import Image from "next/image";
 import Slider from "react-slick";
 
-
 const data: Item[] = [
 	{
 		title: "Ganesh Chaturthi",
