@@ -7,7 +7,8 @@ interface Item{
 
 interface Props {
     text: string,
-    itemList: Item[] | undefined
+    itemList: Item[] | undefined,
+    callback?: Function
 }
 
 export default function SubMenuItem(params: Props){
@@ -18,7 +19,7 @@ export default function SubMenuItem(params: Props){
     const title = params.text;
 
     return (
-            <div className={`flex relative px-[30px] py-[15px] border-b-[2px] rounded-b-[6px] cursor-pointer bg-white border-white`}
+            <div className={`flex relative px-[30px] py-[15px] border-b-[2px] rounded-b-[6px] cursor-pointer bg-white border-white z-[100]`}
                 onMouseOver={e => setPopupFlag(true)}
                 onMouseLeave={e => setPopupFlag(false)}
                 >
@@ -32,7 +33,7 @@ export default function SubMenuItem(params: Props){
                 <div className="absolute top-[83px] left-[5px] w-max border-b-[2px] rounded-b-[6px] border-[#808080] border-b-[2px] bg-[#ECE9E9] flex flex-col p-[2px]">
                     {
                         items?.map((item, index) => (
-                            <div className="flex cusor-pointer hover:text-[#FF5733] hover:bg-white p-[20px] animate-dissolve ease-out duration-300" key={index}>
+                            <div className="flex cusor-pointer hover:text-[#FF5733] hover:bg-white p-[20px] animate-dissolve ease-out duration-300" key={index} onClick={() => {}}>
                                 <div className="lead-[21px] self-center">{item.title}</div>
                             </div>   
                         ))

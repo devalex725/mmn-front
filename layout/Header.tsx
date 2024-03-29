@@ -3,32 +3,36 @@
 import { Img } from "react-image";
 import SubMenuItem from "./SubMenuItem";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const menuItems = [
-    { title: "Home", link : "#"},
+    { title: "Home", link : "/home"},
     { 
         title: "About us", 
-        link: "#",
+        link: "",
         subItems: [
-            { title: "Mission and Vision", link : "#"},
-            { title: "MMN History", link : "#"},
-            { title: "MMN Constitution", link : "#"},
-            { title: "Committee Members", link : "#"},
-            { title: "Become a MMN member", link : "#"},
+            { title: "Mission and Vision", link : ""},
+            { title: "MMN History", link : ""},
+            { title: "MMN Constitution", link : ""},
+            { title: "Committee Members", link : ""},
+            { title: "Become a MMN member", link : ""},
         ]
     },
-    { title: "MemberShip", link : "#"},
-    { title: "Event", link : "#"},
-    { title: "Gallery", link : "#"},
-    { title: "MMN Initiatives", link : "#"},
-    { title: "Contact us", link : "#"},
-    { title: "Login", link : "#"},
+    { title: "MemberShip", link : "/membership"},
+    { title: "Event", link : ""},
+    { title: "Gallery", link : ""},
+    { title: "MMN Initiatives", link : ""},
+    { title: "Contact us", link : ""},
+    { title: "Login", link : ""},
 ]
 
 export default function HeaderBar(){
     const [selectedTitle, setSelectedTitle] = useState("Home");
+    const router = useRouter();
+
     const menuClicked = (menuTitle:string, link:string) => {
         setSelectedTitle(menuTitle);
+        if(link != "") router.push(link);    
     }
 
     const RenderItems = menuItems.map( (item, index) =>  {
@@ -53,7 +57,7 @@ export default function HeaderBar(){
     });
 
     return (
-        <div className="w-full flex gap-[10px] px-[30px]">
+        <div className="w-full flex gap-[10px] px-[30px] z-[3]">
             <Img src="image/logo/headerlogo.png" className="py-[15px]" />
             <div className="flex-grow px-[30px] xl:flex gap-[1px] justify-end hidden">
                 { RenderItems }

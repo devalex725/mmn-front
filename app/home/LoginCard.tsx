@@ -6,8 +6,8 @@ import GoogleButton from "@/components/GoogleButton";
 export default function LoginCard(){
     return (
         <MMNPanel className="">
-            <MMNTitle1 title="Already member?" className="text-[#00205B]" />
-            <GoogleButton title="Log in with Google"/>
+            <MMNTitle1 title="Already member?" color="purple" />
+            <GoogleButton title="Log in with Google" className="max-w-full"/>
             <div className="font-bold leading-[28px] text-center">
                 OR
             </div>
@@ -15,16 +15,16 @@ export default function LoginCard(){
             <div className="flex flex-col gap-[10px]">
                 <div className="flex flex-col gap-[5px]">
                     <div className="leading-[28px]">Member id/Email id</div>
-                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px]" placeholder="Enter member ID/Email id" />
+                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full" placeholder="Enter member ID/Email id" />
                 </div>
 
                 <div className="flex flex-col gap-[5px]">
                     <div className="leading-[28px]">Password</div>
-                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px]" placeholder="Enter password" />
+                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full" placeholder="Enter password" />
                 </div>
 
                 <div className="flex justify-end">
-                    <MMNButton title="Login" className="text-white bg-[#00205B]" size="normal"/>
+                    <MMNButton title="Login" color="purple" size="normal"/>
                 </div>
             </div>
         </MMNPanel>

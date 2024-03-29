@@ -1,13 +1,25 @@
 
 interface Props {
     title: string,
-    size: "big" | "normal" | "small",
-    className: string | null | undefined
+    size?: "big" | "normal" | "small",
+    color?: "purple" | "white",
+    className?: string | null
 }
 
 export default function MMNButton(params: Props){
-    let className: string = "flex cursor-pointer rounded-[6px] max-w-max";
-    switch(params.size){
+    let className: string = "cursor-pointer rounded-[6px] inline-block";
+    
+    if(params.color == "purple"){
+        className += " bg-mmn-purple text-white";
+    }
+
+    if(params.color == "white"){
+        className += " bg-white text-mmn-purple border-[1px] border-[#00205B]";
+    }
+
+    const size: string = params.size == undefined ? "normal" : params.size;
+    
+    switch(size){
         case "big":{
             break;
         }
@@ -22,8 +34,8 @@ export default function MMNButton(params: Props){
     }
 
     return (
-        <div className={`${className} ${params.className}`} >
-            <div className="leading-[24px] text-[16px] self-center">
+        <div className={`${className} ${params.className || ""}`} >
+            <div className="leading-[24px] text-[16px] self-center w-full text-center">
                 { params.title }
             </div>
         </div>

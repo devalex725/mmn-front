@@ -9,7 +9,7 @@ export default function AboutPane(){
     return (
         <MMNContainer>
             <div className="pt-[30px] pb-[40px]">
-                <MMNTitle1 title="About MMN" className="text-[#00205B]" />
+                <MMNTitle1 title="About MMN" color="purple" />
                 <div className="leading-[28px]">
                     { blog }
                 </div>

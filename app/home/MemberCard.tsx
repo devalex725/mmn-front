@@ -5,7 +5,7 @@ import MMNButton from "@/components/Button";
 export default function MemberCard(){
     return (
         <MMNPanel className="bg-[#FF5733]">
-            <MMNTitle1 title="Become a member" className="text-white" />
+            <MMNTitle1 title="Become a member" color="white" />
             <div className="leading-[21px] text-white">
                 Price: 
                 <div className="inline text-red-500 bg-white mx-[8px] px-[8px] py-[4px] rounded-[3px]">kr 150</div>
@@ -17,7 +17,7 @@ export default function MemberCard(){
             </div>
 
             <div className="flex justify-end">
-                <MMNButton title="Become a member" className="text-[#00205B] bg-white" size="normal" />
+                <MMNButton title="Become a member" color="purple" />
             </div>
         </MMNPanel>
     )

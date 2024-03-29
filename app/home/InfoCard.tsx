@@ -14,9 +14,9 @@ interface Props {
 
 export default function InfoCard(params:Props){
     return (
-            <div className={`${params.className} w-full p-0 flex flex-col gap-[14px] text-white`}>
+            <div className={`${params.className || ""} w-full p-0 flex flex-col gap-[14px] text-white`}>
                 <div>
-                    <MMNButton title="Upcoming event" className="text-[#00205B] bg-white" size="small"/>
+                    <MMNButton title="Upcoming event" size="small" color="white"/>
                 </div>
                 
                 <div className="flex gap-[10px] text-[34px] leading-[51px]">
@@ -28,7 +28,7 @@ export default function InfoCard(params:Props){
                     <span className="">Date: </span>
                     <span className="font-bold"> {params.event.date} </span>
                     <div>
-                        <MMNButton title="The date is tentative. Stay tuned for further details..." className="text-[#00205B] bg-white" size="small"/>
+                        <MMNButton title="The date is tentative. Stay tuned for further details..." size="small" color="white"/>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ export default function InfoCard(params:Props){
 
                 <div className="flex gap-[20px]">
                     <MMNButton title="Learn more" className="border-[1px] border-white text-white" size="normal"/>
-                    <MMNButton title="Register for event now" className="text-white bg-[#00205B]" size="normal"/>
+                    <MMNButton title="Register for event now" color="purple"/>
                 </div>
             </div>
     )

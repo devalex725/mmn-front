@@ -32,6 +32,13 @@ body {
   }
 }
 
+.bg-mmn-purple{
+  background-color: #00205B;
+}
+
+.text-mmn-purple{
+  color: #00205B;
+}
 
 @keyframes dissolve {
   0% {
@@ -65,4 +72,8 @@ body {
 .slick-dots li.slick-active button:before{
   color: white;
   opacity: 1;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background: rgba(0, 0, 0, 0.7) !important;
 }
