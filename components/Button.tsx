@@ -14,7 +14,7 @@ export default function MMNButton(params: Props){
     }
 
     if(params.color == "white"){
-        className += " bg-white text-mmn-purple border-[1px] border-[#00205B]";
+        className += " bg-white text-mmn-purple";
     }
 
     const size: string = params.size == undefined ? "normal" : params.size;

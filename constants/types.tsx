@@ -8,10 +8,12 @@ export interface AccountInfo {
     memberid: string,
 }
 
-export interface ModalProps {
-    title: string,
-    children: React.ReactNode,
-    showModal: boolean,
-    onClose: () => void,
-    onOk: () => void
-}
+export const Genders = [
+    { value: "male", label: "Male" },
+    { value: "female", label: "FeMale" },
+];
+
+export const Relationships = [
+    { value: "child", label: "Child" },
+    { value: "friend", label: "Friend" },
+]

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -22,6 +21,7 @@ export default function RootLayout({
     <SessionWrapper>
       <html lang="en">
         <body className={`text-[14px] border-white flex justify-center leading-[21px] font-medium ${inter.className}`}>
+          <link rel="icon" href="/favicon.svg" sizes="any" />
           <div className="w-full max-w-[1440px] flex flex-col min-h-screen">
             <SocialLinkBar />
             <HeaderBar />

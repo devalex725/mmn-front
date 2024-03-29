@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata } from "next";
 import { GetPageTitle, FavIcon } from "../../constants"
 import TopNav from "@/components/TopNav";
 import MMNContainer from "@/components/Container";
@@ -11,15 +10,11 @@ import RenewMemberCard from "./RenewMemberCard";
 import { useRouter } from "next/navigation";
 const title = GetPageTitle("Membership");
 
-// export const metadata = {
-//     title: title,
-//     icons: FavIcon
-// };
-
 const NavData = [
     { title: "Home", link: "/home" },
     { title: "Membership", link: "#" },
 ];
+
 export default function MemberShipPage() {
     const router = useRouter();
     const handleManualClick = () => {

@@ -1,9 +1,9 @@
 const defaultPageTitle = "Marathi Mandal Norway";
 
-exports.GetPageTitle = (subTitle: string) => {
+export const GetPageTitle = (subTitle: string) => {
     return defaultPageTitle + " - " + subTitle;
 }
 
-exports.FavIcon = [
+export const FavIcon = [
     { rel: 'icon', url: '/favicon.png' },
 ];
