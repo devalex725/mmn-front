@@ -49,7 +49,7 @@ export default function FamilyMemberModal({ open, onClose, onSave }: FamilyMembe
                 <FamilyInfoPane account={member} setMember={setMember}/>
                 <div className="flex justify-end gap-[20px]">
                     <div onClick={onClose}>
-                        <MMNButton title="Close" color="white" className={"border-[1px] border-[#00205B]"} />
+                        <MMNButton title="Close" color="white" className={"border-[1px] border-color-mmn-purple"} />
                     </div>
 
                     <div onClick={handleDone}>

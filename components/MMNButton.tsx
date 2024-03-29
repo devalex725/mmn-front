@@ -14,7 +14,7 @@ export default function MMNButton(params: Props){
     }
 
     if(params.color == "white"){
-        className += " bg-white text-mmn-purple";
+        className += " bg-white text-color-mmn-purple";
     }
 
     const size: string = params.size == undefined ? "normal" : params.size;
@@ -35,7 +35,7 @@ export default function MMNButton(params: Props){
 
     return (
         <div className={`${className} ${params.className || ""}`} >
-            <div className="leading-[24px] text-[16px] self-center w-full text-center">
+            <div className="line-height-mmn-medium text-size-mmn-medium self-center w-full text-center">
                 { params.title }
             </div>
         </div>

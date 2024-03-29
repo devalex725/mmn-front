@@ -24,7 +24,7 @@ export default function InfoCard(params:Props){
                     <h1 className="font-normal"> {params.event.year} </h1>
                 </div>
 
-                <div className="flex gap-[10px] leading-[21px] items-center flex-wrap">
+                <div className="flex gap-[10px] line-height-mmn-normal items-center flex-wrap">
                     <span className="">Date: </span>
                     <span className="font-bold"> {params.event.date} </span>
                     <div>
@@ -32,12 +32,12 @@ export default function InfoCard(params:Props){
                     </div>
                 </div>
 
-                <div className="flex gap-[10px] leading-[21px]">
+                <div className="flex gap-[10px] line-height-mmn-normal">
                     <span className="">Address: </span>
                     <span className="font-bold"> {params.event.address} </span>
                 </div>
 
-                <div className="leading-[28px]">
+                <div className="line-height-mmn-large">
                     {params.event.description}
                 </div>
 

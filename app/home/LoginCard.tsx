@@ -8,19 +8,19 @@ export default function LoginCard(){
         <MMNPanel className="">
             <MMNTitle title="Already member?" color="purple" />
             <GoogleButton title="Log in with Google" className="max-w-full"/>
-            <div className="font-bold leading-[28px] text-center">
+            <div className="font-bold line-height-mmn-large text-center">
                 OR
             </div>
 
             <div className="flex flex-col gap-[10px]">
                 <div className="flex flex-col gap-[5px]">
-                    <div className="leading-[28px]">Member id/Email id</div>
-                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full" placeholder="Enter member ID/Email id" />
+                    <div className="line-height-mmn-large">Member id/Email id</div>
+                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full" placeholder="Enter member ID/Email id" />
                 </div>
 
                 <div className="flex flex-col gap-[5px]">
-                    <div className="leading-[28px]">Password</div>
-                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full" placeholder="Enter password" />
+                    <div className="line-height-mmn-large">Password</div>
+                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full" placeholder="Enter password" />
                 </div>
 
                 <div className="flex justify-end">

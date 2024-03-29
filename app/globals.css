@@ -35,14 +35,6 @@ body {
   }
 }
 
-.bg-mmn-purple{
-  background-color: #00205B;
-}
-
-.text-mmn-purple{
-  color: #00205B;
-}
-
 @keyframes dissolve {
   0% {
     opacity: 1;
@@ -79,4 +71,71 @@ body {
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   background: rgba(0, 0, 0, 0.7) !important;
+}
+
+
+.bg-mmn-purple{
+  background-color: #00205B;
+}
+
+.bg-mmn-red{
+  background-color: #FF5733;
+}
+
+.text-color-mmn-grey{
+  color: #757575;
+}
+
+.text-color-mmn-yellow{
+  color: #FF5733;
+}
+
+.text-color-mmn-purple{
+  color: #00205B;
+}
+
+.text-size-mmn-small{
+  font-size: 14px;
+}
+.text-size-mmn-normal{
+  font-size: 14px;
+}
+.text-size-mmn-medium{
+  font-size: 16px;
+}
+.text-size-mmn-large{
+  font-size: 20px;
+}
+.text-size-mmn-extra{
+  font-size: 24px;
+}
+
+
+.line-height-mmn-small{
+  line-height: 18px;
+}
+.line-height-mmn-normal{
+  line-height: 21px;
+}
+.line-height-mmn-medium{
+  line-height: 24px;
+}
+.line-height-mmn-large{
+  line-height: 28px;
+}
+.line-height-mmn-extra{
+  line-height: 36px;
+}
+
+
+.border-color-mmn-grey{
+  border-color: #BCBCBC;
+}
+
+.border-color-mmn-lightgrey{
+  border-color: #D9D9D9;
+}
+
+.border-color-mmn-purple{
+  border-color: #00205B;
 }

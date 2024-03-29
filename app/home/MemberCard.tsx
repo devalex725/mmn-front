@@ -4,15 +4,15 @@ import MMNButton from "@/components/MMNButton";
 
 export default function MemberCard(){
     return (
-        <MMNPanel className="bg-[#FF5733]">
+        <MMNPanel className="bg-mmn-red">
             <MMNTitle title="Become a member" color="white" />
-            <div className="leading-[21px] text-white">
+            <div className="line-height-mmn-normal text-white">
                 Price: 
                 <div className="inline text-red-500 bg-white mx-[8px] px-[8px] py-[4px] rounded-[3px]">kr 150</div>
                 per member
             </div>
 
-            <div className="leading-[28px] text-white">
+            <div className="line-height-mmn-large text-white">
             MMN Membership goes from January to December of each year. Do check our membership benefits and join us.
             </div>
 

@@ -38,9 +38,9 @@ export default function SignUpGooglePage() {
                     <BlogPane />
                     <AccountInfoPane account={defMember} setMember={setMember} />
 
-                    <div className="leading-[28px] font-bold">Add family members</div>
+                    <div className="line-height-mmn-large font-bold">Add family members</div>
                     <div>
-                        <MMNButton title={"+ Add family member"} color="white" className={"border border-[#00205B]"} />
+                        <MMNButton title={"+ Add family member"} color="white" className={"border border-color-mmn-purple"} />
                     </div>
 
                 </div>

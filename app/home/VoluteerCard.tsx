@@ -6,7 +6,7 @@ export default function VolunteerCard(){
     return (
         <MMNPanel className="">
             <MMNTitle title="Become volunteer" color="purple" />
-            <div className="leading-[28px]">
+            <div className="line-height-mmn-large">
                 MMN is an organisation for members, by members - run on support of our volunteer members. If you have the skill and time to offer for MMS community's benefit, we need you !
             </div>
 

@@ -18,7 +18,7 @@ const GetMemberLine = (member: FamilyAccountInfo, index: number, RemoveClick?: (
             <div> {`${member.firstName} ${member.lastName}`} </div>
             {
                 member.relation == 'me' ? 
-                    <div className="px-[10px] py-[6px] text-[12px] leading-[18px] rounded-[6px] bg-[#F1F6FF]"> Primary member </div> : 
+                    <div className="px-[10px] py-[6px] text-size-mmn-small line-height-mmn-small rounded-[6px] bg-[#F1F6FF]"> Primary member </div> : 
                     <div onClick={() => RemoveClick?.(index)}><TrashButton /></div> 
             }
         </div>
@@ -64,14 +64,14 @@ export default function Paypane(params: Props) {
 
                 </div>
                 <div onClick={() => setIsOpenModal(true)}>
-                    <MMNButton title="+ Add family member" color="white" className={"w-full border-[1px] border-[#00205B]"} />
+                    <MMNButton title="+ Add family member" color="white" className={"w-full border-[1px] border-color-mmn-purple"} />
                 </div>
-                <div className="flex justify-between font-semibold text-mmn-purple">
-                    <div className="text-[16px] leading-[24px]">
+                <div className="flex justify-between font-semibold text-color-mmn-purple">
+                    <div className="text-size-mmn-medium line-height-mmn-medium">
                         Total payment
                     </div>
 
-                    <div className="text-[24px] leading-[36px]">kr {price}</div>
+                    <div className="text-size-mmn-extra line-height-mmn-extra">kr {price}</div>
                 </div>
 
                 <div className="flex justify-end">

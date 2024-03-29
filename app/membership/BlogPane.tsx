@@ -9,10 +9,10 @@ export default function BlogPane() {
         <div className="flex flex-col gap-[10px]">
             <MMNTitle title="Become a member" color="purple" />
             <div className="flex flex-col gap-[5px]">
-                <div className="font-bold leading-[28px]">
+                <div className="font-bold line-height-mmn-large">
                     Marathi Mandal Norway - Membership 2023
                 </div>
-                <div className="leading-[28px]">
+                <div className="line-height-mmn-large">
                     This form is sent to you for the membership of Marathi Mandal Norway 2023.Please read this form carefully and fill in correct information and pay the applicable membership fee for your family.
                 </div>
             </div>

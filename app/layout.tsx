@@ -8,7 +8,7 @@ import FooterBar from "@/layout/Footer";
 
 //default font-14px, weight 500, family-poppin
 const inter = Poppins({
-  weight: ['500'],
+  weight: ['400', '500','600','700','800'],
   subsets: ["latin"]
 });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <SessionWrapper>
       <html lang="en">
-        <body className={`text-[14px] border-white flex justify-center leading-[21px] font-medium ${inter.className}`}>
+        <body className={`text-size-mmn-normal border-white flex justify-center line-height-mmn-normal font-medium ${inter.className}`}>
           <link rel="icon" href="/favicon.svg" sizes="any" />
           <div className="w-full max-w-[1440px] flex flex-col min-h-screen">
             <SocialLinkBar />

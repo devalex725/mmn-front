@@ -33,7 +33,7 @@ export default function SubMenuItem(params: Props) {
             onMouseOver={e => setPopupFlag(true)}
             onMouseLeave={e => setPopupFlag(false)}
         >
-            <div className="leading-[21px] self-center flex gap-[6px]">
+            <div className="line-height-mmn-normal self-center flex gap-[6px]">
                 <span> {title} </span>
                 <span> {popupFlag ? "▲" : "▼"} </span>
             </div>
@@ -43,7 +43,7 @@ export default function SubMenuItem(params: Props) {
                     <div className="absolute top-[83px] left-[5px] w-max border-b-[2px] rounded-b-[6px] border-[#808080] border-b-[2px] bg-[#ECE9E9] flex flex-col p-[2px]">
                         {
                             items?.map((item, index) => (
-                                <div className="flex cusor-pointer hover:text-[#FF5733] hover:bg-white p-[20px] animate-dissolve ease-out duration-300"
+                                <div className="flex cusor-pointer hover:text-color-mmn-yellow hover:bg-white p-[20px] animate-dissolve ease-out duration-300"
                                     key={index} onClick={() => handleClick(item) }>
                                     <div className="lead-[21px] self-center">{item.title}</div>
                                 </div>

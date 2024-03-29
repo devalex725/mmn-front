@@ -33,22 +33,22 @@ export default function SignUpManualPage() {
                     <div className="grid grid-cols-2 gap-[26px]">
                         <div>
                             <div className="pb-[5px]">Type password*</div>
-                            <input type="password" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full"
+                            <input type="password" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full"
                                 placeholder="Enter Password"
                             />
                         </div>
 
                         <div>
                             <div className="pb-[5px]">Re-Type password*</div>
-                            <input type="password" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full"
+                            <input type="password" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full"
                                 placeholder="Re-Enter Password"
                             />
                         </div>
                     </div>
 
-                    <div className="leading-[28px] font-bold">Add family members</div>
+                    <div className="line-height-mmn-large font-bold">Add family members</div>
                     <div>
-                        <MMNButton title={"+ Add family member"} color="white" className={"border border-[#00205B]"} />
+                        <MMNButton title={"+ Add family member"} color="white" className={"border border-color-mmn-purple"} />
                     </div>
 
                 </div>

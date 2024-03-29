@@ -41,12 +41,12 @@ export default function HeaderBar(){
         if(subItemList == undefined){
             return (
                 <div className={`flex border-b-[2px] rounded-b-[6px] px-[30px] py-[15px] cursor-pointer 
-                    ${selectedTitle == item.title ? "text-white bg-[#FF5733] border-[#FFC5B9]" : "bg-white border-white"}
+                    ${selectedTitle == item.title ? "text-white bg-mmn-red border-[#FFC5B9]" : "bg-white border-white"}
                     hover:bg-[#EAEAEA] hover:border-[#FFC5B9]`}
                     onClick={() => menuClicked(item.title, item.link)}
                     key={index}
                     >
-                    <div className="leading-[21px] self-center">
+                    <div className="line-height-mmn-normal self-center">
                         {item.title}
                     </div>
                 </div>

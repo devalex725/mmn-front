@@ -19,7 +19,7 @@ const GoogleButton = (params: Props) => {
         width={24}
         height={24}
       />
-      <h3 className="text-[20px] text-[#757575] font-roboto">
+      <h3 className="text-size-mmn-large text-color-mmn-grey font-roboto">
         { params.title }
       </h3>
     </div>

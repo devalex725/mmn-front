@@ -33,7 +33,7 @@ export default function RenewMemberCard(params: Props) {
     }
 
     return (
-        <div className={`flex flex-col p-[24px] gap-[14px] rounded-[10px] border-[1px] border-[#D9D9D9] h-max ${params.className || ""}`}>
+        <div className={`flex flex-col p-[24px] gap-[14px] rounded-[10px] border-[1px] border-color-mmn-lightgrey h-max ${params.className || ""}`}>
             <MMNTitle title="Renew membership?" color="purple" />
             <div className="flex flex-wrap gap-[10px]">
                 <span>Price:</span>
@@ -41,7 +41,7 @@ export default function RenewMemberCard(params: Props) {
                 <span>per member</span>
             </div>
 
-            <div className="italic leading-[28px]">
+            <div className="italic line-height-mmn-large">
                 <span>To renew your membership, please enter your</span>
                 <span className="font-bold">{" Member ID"}</span>
                 <span>{" or "}</span>
@@ -50,7 +50,7 @@ export default function RenewMemberCard(params: Props) {
 
             <div className="flex flex-col gap-[5px]">
                 <div>{"Member id/Email id *"}</div>
-                <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full"
+                <input type="text" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full"
                     placeholder="Enter member ID"
                     value={accountID}
                     onChange={e => setAccountID(e.target.value)}

@@ -44,7 +44,7 @@ const memberCard = (member: CommitteeMember) => {
 
       </div>
 
-      <div className='text-center leading-[28px] font-poppins font-medium'>
+      <div className='text-center line-height-mmn-large font-poppins font-medium'>
         {member.name}
       </div>
     </div>
@@ -75,18 +75,18 @@ const CommitteeMemberPage = () => {
     <>
       <TopNav itemList={NavData} />
 
-      <div className="flex flex-col sm:px-[90px] px-5 gap-[30px] pb-[40px] text-[16px]">
+      <div className="flex flex-col sm:px-[90px] px-5 gap-[30px] pb-[40px] text-size-mmn-medium">
         <MMNTitle title={"Executive committee members"} className={""} color='purple' />
         {exeMemberList}
       </div>
 
-      <div className="flex flex-col sm:px-[90px] px-5 gap-[30px] pb-[40px] text-[16px]">
+      <div className="flex flex-col sm:px-[90px] px-5 gap-[30px] pb-[40px] text-size-mmn-medium">
         <div className='flex gap-[20px] items-center'>
           <MMNTitle title={"Working committee members"} className={""} color='purple' />
 
           <DropDown options={yearList}
-            controlClassName="text-[16px] font-semibold leading-[24px] text-[#FF5733] !rounded-[6px] !pl-[12px] !pr-[32px] bg-[#FFEDEA] !border-none cursor-pointer"
-            menuClassName='text-[16px] font-semibold leading-[24px] border-none '
+            controlClassName="text-size-mmn-medium font-semibold line-height-mmn-medium text-color-mmn-yellow !rounded-[6px] !pl-[12px] !pr-[32px] bg-[#FFEDEA] !border-none cursor-pointer"
+            menuClassName='text-size-mmn-medium font-semibold line-height-mmn-medium border-none '
             arrowClassName='top-[18px] right-[10px]'
             value={'2024'}
             onChange={() => { }}

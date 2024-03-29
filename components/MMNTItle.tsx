@@ -5,8 +5,8 @@ interface Props {
 }
 
 export default function MMNTitle(params: Props){
-    let className = "font-semibold text-[24px] leading-[36px] ";
-    if(params.color == "purple") className += "text-mmn-purple";
+    let className = "font-semibold text-size-mmn-extra line-height-mmn-extra ";
+    if(params.color == "purple") className += "text-color-mmn-purple";
     if(params.color == "white") className += "text-white";
 
     return (

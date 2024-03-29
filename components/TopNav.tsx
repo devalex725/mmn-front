@@ -29,7 +29,7 @@ export default function TopNav(params: Props) {
                             </span>
                         } else {
                             return <span key={index}>
-                                <a className="text-[#FF5733] underline" href={item.link}>
+                                <a className="text-color-mmn-yellow underline" href={item.link}>
                                     {item.title}
                                 </a>
                                 <span>{" > "}</span>
