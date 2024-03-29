@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function MMNButton(params: Props){
-    let className: string = "cursor-pointer rounded-[6px] inline-block";
+    let className: string = "cursor-pointer min-w-max rounded-[6px] inline-block";
     
     if(params.color == "purple"){
         className += " bg-mmn-purple text-white";

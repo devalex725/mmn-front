@@ -3,7 +3,7 @@ import MMNTitle from "@/components/MMNTItle";
 
 export default function PaymentCard() {
     return (
-        <div className="rounded-[10px] p-[24px] border border-color-mmn-lightgrey bg-mmn-red flex flex-col gap-[14px] text-white max-w-[420px] w-1/2 h-max">
+        <div className="rounded-[10px] p-[24px] border border-color-mmn-lightgrey bg-mmn-red flex flex-col gap-[14px] text-white sm:w-1/2 w-full h-max min-w-max">
             <MMNTitle title="Total Payment" color="white" />
             
             <div className="grid grid-cols-2 line-height-mmn-large">

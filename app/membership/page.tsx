@@ -23,10 +23,10 @@ export default function MemberShipPage() {
     return (
         <>
             <TopNav itemList={NavData} />
-            <MMNContainer className="gap-[40px] pb-[40px]">
+            <MMNContainer className="gap-[40px] pb-[40px] flex-col sm:flex-row">
                 <div className="flex flex-col gap-[20px] grow-[2]">
                     <BlogPane />
-                    <div className="flex flex-col gap-[20px] w-1/2 pr-[30px]">
+                    <div className="flex flex-col gap-[20px] w-max pr-[30px]">
                         <div onClick={() => signIn("google", { redirect: false, callbackUrl: 'http://localhost:3000/signup/google' } )}>
                             <GoogleButton title={"Signup with Google"} className="max-w-full" />
                         </div>
@@ -37,7 +37,7 @@ export default function MemberShipPage() {
                     </div>
                 </div>
 
-                <RenewMemberCard className="max-w-[420px] w-1/2" />
+                <RenewMemberCard className="max-w-[420px]" />
             </MMNContainer>
         </>
     );

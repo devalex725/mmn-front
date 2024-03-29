@@ -39,7 +39,6 @@ export default function FamilyMemberModal({ open, onClose, onSave }: FamilyMembe
     return (
         <Modal isOpen={open} onRequestClose={onClose} style={customStyles}>
             <div className="flex flex-col gap-[30px]">
-
                 <div className="flex justify-between items-center">
                     <MMNTitle title="Add family members" color="purple" />
                     <div className="closeButton cursor-pointer" onClick={onClose}>

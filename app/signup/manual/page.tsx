@@ -25,7 +25,7 @@ export default function SignUpManualPage() {
     return (
         <>
             <TopNav itemList={NavData} />
-            <MMNContainer className="gap-[40px] pb-[40px]">
+            <MMNContainer className="gap-[40px] pb-[40px] lg:flex-row flex-col">
                 <div className="flex flex-col gap-[20px] grow-[2]">
                     <BlogPane />
                     <AccountInfoPane account={null} setMember={setMember} />
