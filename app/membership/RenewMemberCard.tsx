@@ -5,13 +5,13 @@ import MMNContainer from "@/components/Container";
 import MMNTitle1 from "@/components/TItle-1";
 import { useState } from "react";
 import Paypane from "./Paypane";
-import { AccountInfo } from "@/constants/types";
+import { FamilyAccountInfo } from "@/constants/types";
 
 interface Props {
     className?: string,
 }
 
-const defUser: AccountInfo = {
+const defUser: FamilyAccountInfo = {
     firstName: "Alex",
     lastName: "Bilakh",
     birth: "2001-3-14",
@@ -23,7 +23,7 @@ const defUser: AccountInfo = {
 
 export default function RenewMemberCard(params: Props) {
     const [accountID, setAccountID] = useState<string>("1234567890");
-    const [account, setAccount] = useState<AccountInfo>();
+    const [account, setAccount] = useState<FamilyAccountInfo>();
 
     const handleRenewNowClick = () => {
         if (accountID == "" || accountID == undefined)
@@ -33,7 +33,7 @@ export default function RenewMemberCard(params: Props) {
     }
 
     return (
-        <div className={`flex flex-col p-[24px] gap-[14px] rounded-[10px] border-[1px] border-[#D9D9D9] ${params.className || ""}`}>
+        <div className={`flex flex-col p-[24px] gap-[14px] rounded-[10px] border-[1px] border-[#D9D9D9] h-max ${params.className || ""}`}>
             <MMNTitle1 title="Renew membership?" color="purple" />
             <div className="flex flex-wrap gap-[10px]">
                 <span>Price:</span>

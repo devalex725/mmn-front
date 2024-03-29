@@ -2,16 +2,16 @@
 
 import MMNButton from "@/components/Button";
 import { useState } from "react";
-import { AccountInfo } from "@/constants/types";
+import { FamilyAccountInfo } from "@/constants/types";
 import TrashButton from "@/components/icons/trash";
 import FamilyMemberModal from "./FamilyMemberModal";
 
 
 interface Props {
-    account?: AccountInfo,
+    account?: FamilyAccountInfo,
 }
 
-const GetMemberLine = (member: AccountInfo, index: number, RemoveClick?: (id: number) => void) => {
+const GetMemberLine = (member: FamilyAccountInfo, index: number, RemoveClick?: (id: number) => void) => {
     // const aaa = member.relation;
     return (
         <div className="py-[10px] flex justify-between items-center">
@@ -27,8 +27,8 @@ const GetMemberLine = (member: AccountInfo, index: number, RemoveClick?: (id: nu
 
 export default function Paypane(params: Props) {
 
-    const mainAccount = params.account as AccountInfo;
-    const [familyAccounts, setFamilyAccounts] = useState<AccountInfo[]>([])
+    const mainAccount = params.account as FamilyAccountInfo;
+    const [familyAccounts, setFamilyAccounts] = useState<FamilyAccountInfo[]>([])
     const [price, setPrice] = useState<number>(0);
     const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
 

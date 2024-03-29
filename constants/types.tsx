@@ -1,11 +1,16 @@
-export interface AccountInfo {
+export interface FamilyAccountInfo {
     firstName: string,
-    lastName: string,
-    birth: string,
+    lastName?: string | null,
+    birth?: string | null,
     email: string,
-    gender: 'male' | 'female',
-    relation: string,
-    memberid: string,
+    gender?: 'male' | 'female' | null,
+    relation?: string | null,
+    memberid?: string | null,
+}
+
+export interface AccountInfo extends FamilyAccountInfo {
+    mobile?: string | null,
+    country?: string | null,
 }
 
 export const Genders = [
@@ -16,4 +21,10 @@ export const Genders = [
 export const Relationships = [
     { value: "child", label: "Child" },
     { value: "friend", label: "Friend" },
+]
+
+export const CountryList = [
+    { value: "US", label: "United States" },
+    { value: "CA", label: "Canada" },
+    { value: "NR", label: "Norway" },
 ]

@@ -1,28 +1,24 @@
 import { useEffect, useState } from "react"
 
 import DropDown from 'react-dropdown';
-import { FamilyAccountInfo, Genders, Relationships } from "@/constants/types";
+import { AccountInfo, Genders, CountryList } from "@/constants/types";
 
 interface Props {
-    account: FamilyAccountInfo | null, 
-    setMember: (member: FamilyAccountInfo | null) => void
+    account: AccountInfo | null, 
+    setMember: (member: AccountInfo | null) => void
 }
 
-export default function FamilyInfoPane(params: Props) {
-    const [member, setMember] = useState<FamilyAccountInfo|null>(null);
-    const defAccountInfo: FamilyAccountInfo| null = params.account;
-
-    useEffect(() => { setMember(params.account) }, [defAccountInfo]);
-
-    const handleOnChange = (key: keyof FamilyAccountInfo, value: any) => {
+export default function AccountInfoPane(params: Props) {
+    const [member, setMember] = useState<AccountInfo|null>(params.account);
+    const handleOnChange = (key: keyof AccountInfo, value: any) => {
         setMember(prev => ({ ...prev!, [key]: value }));
         params.setMember(member);
     }
 
     return (
-        <div className="flex flex-col gap-[10px] ">
-            <div className="font-bold leading-[28px]">{member?.firstName || ""}</div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[26px] leading-[28px]">
+        <div className="flex flex-col gap-[10px] leading-[28px]">
+            <div className="font-bold">{"Primary member information"}</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[26px] ">
                 <div>
                     <div className="pb-[5px]">First name*</div>
                     <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full"
@@ -31,6 +27,7 @@ export default function FamilyInfoPane(params: Props) {
                         onChange={e => handleOnChange("firstName", e.target.value)}
                     />
                 </div>
+                
                 <div>
                     <div className="pb-[5px]">Last name*</div>
                     <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full"
@@ -57,6 +54,23 @@ export default function FamilyInfoPane(params: Props) {
                         onChange={e => handleOnChange("email", e.target.value)}
                     />
                 </div>
+                
+                <div>
+                    <div className="pb-[5px]">Mobile no *</div>
+                    <input type="text" className="px-[14px] py-[16px] border-[1px] border-[#BCBCBC] rounded-[6px] leading-[24px] w-full"
+                        placeholder="+123456789"
+                    />
+                </div>
+
+                <div>
+                    <div className="pb-[5px]">Kommune*</div>
+                    <DropDown options={CountryList}
+                        controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !leading-[24px]"
+                        arrowClassName={"!right-[27px] !top-[27px]"}
+                        onChange={(e) => { handleOnChange("relation", e.value) }}
+                        value={member?.gender}
+                        placeholder={"Select Kommune"} />
+                </div>
 
                 <div>
                     <div className="pb-[5px]">Gender*</div>
@@ -66,15 +80,6 @@ export default function FamilyInfoPane(params: Props) {
                         onChange={(e) => { handleOnChange("gender", e.value) }}
                         value={member?.gender}
                         placeholder={"Select your Gender"} />
-                </div>
-                <div>
-                    <div className="pb-[5px]">Relationship*</div>
-                    <DropDown options={Relationships}
-                        controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !leading-[24px]"
-                        arrowClassName={"!right-[27px] !top-[27px]"}
-                        onChange={(e) => { handleOnChange("relation", e.value) }}
-                        value={member?.gender}
-                        placeholder={"Select Relation"} />
                 </div>
             </div>
         </div>

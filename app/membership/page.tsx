@@ -8,6 +8,8 @@ import MMNButton from "@/components/Button";
 import GoogleButton from "@/components/GoogleButton";
 import RenewMemberCard from "./RenewMemberCard";
 import { useRouter } from "next/navigation";
+import { useSession, signIn, signOut } from "next-auth/react"
+
 const title = GetPageTitle("Membership");
 
 const NavData = [
@@ -17,9 +19,6 @@ const NavData = [
 
 export default function MemberShipPage() {
     const router = useRouter();
-    const handleManualClick = () => {
-        router.push("/signup");
-    }
 
     return (
         <>
@@ -28,14 +27,17 @@ export default function MemberShipPage() {
                 <div className="flex flex-col gap-[20px] grow-[2]">
                     <BlogPane />
                     <div className="flex flex-col gap-[20px] w-1/2 pr-[30px]">
-                        <GoogleButton title={"Signup with Google"} className="max-w-full" />
-                        <div onClick={handleManualClick} className="">
+                        <div onClick={() => signIn("google", { redirect: false, callbackUrl: 'http://localhost:3000/signup/google' } )}>
+                            <GoogleButton title={"Signup with Google"} className="max-w-full" />
+                        </div>
+
+                        <div onClick={() => router.push("/signup/manual")}>
                             <MMNButton title="Sign up manually" color="purple" className={"w-full"} />
                         </div>
                     </div>
                 </div>
 
-                <RenewMemberCard className="max-w-[420px]" />
+                <RenewMemberCard className="max-w-[420px] w-1/2" />
             </MMNContainer>
         </>
     );

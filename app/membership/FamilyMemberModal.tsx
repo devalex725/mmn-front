@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { AccountInfo, Genders, Relationships } from "@/constants/types";
+import { FamilyAccountInfo, Genders, Relationships } from "@/constants/types";
 import FamilyInfoPane from './FamilyInfoPane'
 
 import MMNButton from "@/components/Button";
@@ -17,17 +17,17 @@ Modal.setAppElement('#modal-container');
 interface FamilyMemberModalProps {
     open: boolean
     onClose: () => void
-    onSave: (memeber: AccountInfo) => void
+    onSave: (memeber: FamilyAccountInfo) => void
 }
 
 export default function FamilyMemberModal({ open, onClose, onSave }: FamilyMemberModalProps) {
     
-    let member: AccountInfo | null = null;
+    let member: FamilyAccountInfo | null = null;
 
-    const setMember = (_member: AccountInfo | null) => {
+    const setMember = (_member: FamilyAccountInfo | null) => {
         member = _member;
     }
-    
+
     const handleDone = () => {
         if (!member) return;
 
