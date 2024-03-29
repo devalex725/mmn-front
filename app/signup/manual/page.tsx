@@ -1,14 +1,14 @@
 "use client";
 
 import TopNav from "@/components/TopNav";
-import MMNContainer from "@/components/Container";
+import MMNContainer from "@/components/MMNContainer";
 import BlogPane from "@/app/membership/BlogPane";
 import PaymentCard from "../PaymentCard";
 import AccountInfoPane from '../AccountInfoPane';
 import { AccountInfo } from "@/constants/types";
 
 import { useRouter } from "next/navigation";
-import MMNButton from "@/components/Button";
+import MMNButton from "@/components/MMNButton";
 
 const NavData = [
     { title: "Home", link: "/home" },

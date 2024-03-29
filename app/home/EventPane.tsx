@@ -1,11 +1,11 @@
-import MMNTitle1 from "@/components/TItle-1";
-import MMNPanel from "@/components/Panel";
-import MMNButton from "@/components/Button";
+import MMNTitle from "@/components/MMNTItle";
+import MMNPanel from "@/components/MMNPanel";
+import MMNButton from "@/components/MMNButton";
 
 export default function EventPane(){
     return (
         <MMNPanel className="bg-[#FF5733]">
-            <MMNTitle1 title="Become a member" color="purple" />
+            <MMNTitle title="Become a member" color="purple" />
             <div className="leading-[21px] text-white">
                 Price: 
                 <div className="inline text-red-500 bg-white mx-[8px] px-[8px] py-[4px] rounded-[3px]">kr 150</div>

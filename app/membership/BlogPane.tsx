@@ -1,13 +1,13 @@
 
 
-import MMNContainer from "@/components/Container";
+import MMNContainer from "@/components/MMNContainer";
 
-import MMNTitle1 from "@/components/TItle-1";
+import MMNTitle from "@/components/MMNTItle";
 
 export default function BlogPane() {
     return (
         <div className="flex flex-col gap-[10px]">
-            <MMNTitle1 title="Become a member" color="purple" />
+            <MMNTitle title="Become a member" color="purple" />
             <div className="flex flex-col gap-[5px]">
                 <div className="font-bold leading-[28px]">
                     Marathi Mandal Norway - Membership 2023

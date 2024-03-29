@@ -3,8 +3,8 @@ import { useState } from "react";
 import { FamilyAccountInfo, Genders, Relationships } from "@/constants/types";
 import FamilyInfoPane from './FamilyInfoPane'
 
-import MMNButton from "@/components/Button";
-import MMNTitle1 from "@/components/TItle-1";
+import MMNButton from "@/components/MMNButton";
+import MMNTitle from "@/components/MMNTItle";
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -41,7 +41,7 @@ export default function FamilyMemberModal({ open, onClose, onSave }: FamilyMembe
             <div className="flex flex-col gap-[30px]">
 
                 <div className="flex justify-between items-center">
-                    <MMNTitle1 title="Add family members" color="purple" />
+                    <MMNTitle title="Add family members" color="purple" />
                     <div className="closeButton cursor-pointer" onClick={onClose}>
                         <img src="/xmark.circle.fill.svg" />
                     </div>

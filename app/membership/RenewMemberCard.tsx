@@ -1,8 +1,8 @@
 
-import MMNButton from "@/components/Button";
-import MMNContainer from "@/components/Container";
+import MMNButton from "@/components/MMNButton";
+import MMNContainer from "@/components/MMNContainer";
 
-import MMNTitle1 from "@/components/TItle-1";
+import MMNTitle from "@/components/MMNTItle";
 import { useState } from "react";
 import Paypane from "./Paypane";
 import { FamilyAccountInfo } from "@/constants/types";
@@ -34,7 +34,7 @@ export default function RenewMemberCard(params: Props) {
 
     return (
         <div className={`flex flex-col p-[24px] gap-[14px] rounded-[10px] border-[1px] border-[#D9D9D9] h-max ${params.className || ""}`}>
-            <MMNTitle1 title="Renew membership?" color="purple" />
+            <MMNTitle title="Renew membership?" color="purple" />
             <div className="flex flex-wrap gap-[10px]">
                 <span>Price:</span>
                 <span className="font-semibold">{" kr 160 "}</span>

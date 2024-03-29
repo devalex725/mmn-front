@@ -9,12 +9,12 @@ const menuItems = [
     { title: "Home", link : "/home"},
     { 
         title: "About us", 
-        link: "",
+        link: "/aboutus",
         subItems: [
             { title: "Mission and Vision", link : ""},
             { title: "MMN History", link : ""},
             { title: "MMN Constitution", link : ""},
-            { title: "Committee Members", link : ""},
+            { title: "Committee Members", link : "/committeemember"},
             { title: "Become a MMN member", link : ""},
         ]
     },
@@ -52,13 +52,13 @@ export default function HeaderBar(){
                 </div>
                     )
         }else{
-            return <SubMenuItem text={item.title} itemList={ subItemList } key={index}/>
+            return <SubMenuItem item={ item } key={index}/>
         }
     });
 
     return (
         <div className="w-full flex gap-[10px] px-[30px] z-[3]">
-            <Img src="image/logo/headerlogo.png" className="py-[15px]" />
+            <Img src="/image/logo/headerlogo.png" className="py-[15px]" />
             <div className="flex-grow px-[30px] xl:flex gap-[1px] justify-end hidden">
                 { RenderItems }
             </div>

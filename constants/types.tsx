@@ -28,3 +28,8 @@ export const CountryList = [
     { value: "CA", label: "Canada" },
     { value: "NR", label: "Norway" },
 ]
+
+export interface CommitteeMember{
+    name: string, 
+    imageurl: string,
+}

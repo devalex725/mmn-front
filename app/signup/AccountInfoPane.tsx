@@ -67,8 +67,8 @@ export default function AccountInfoPane(params: Props) {
                     <DropDown options={CountryList}
                         controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !leading-[24px]"
                         arrowClassName={"!right-[27px] !top-[27px]"}
-                        onChange={(e) => { handleOnChange("relation", e.value) }}
-                        value={member?.gender}
+                        onChange={(e) => { handleOnChange("country", e.value) }}
+                        value={member?.country || ""}
                         placeholder={"Select Kommune"} />
                 </div>
 
@@ -78,7 +78,7 @@ export default function AccountInfoPane(params: Props) {
                         controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !leading-[24px]"
                         arrowClassName={"!right-[27px] !top-[27px]"}
                         onChange={(e) => { handleOnChange("gender", e.value) }}
-                        value={member?.gender}
+                        value={member?.gender || ""}
                         placeholder={"Select your Gender"} />
                 </div>
             </div>

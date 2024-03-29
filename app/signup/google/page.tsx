@@ -1,8 +1,8 @@
 "use client";
 
 import TopNav from "@/components/TopNav";
-import MMNContainer from "@/components/Container";
-import MMNButton from "@/components/Button";
+import MMNContainer from "@/components/MMNContainer";
+import MMNButton from "@/components/MMNButton";
 
 import BlogPane from "@/app/membership/BlogPane";
 import PaymentCard from "../PaymentCard";

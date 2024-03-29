@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import MMNContainer from "@/components/Container";
+import MMNContainer from "@/components/MMNContainer";
 import InfoCard from "./InfoCard";
 import Image from "next/image";
 import Slider from "react-slick";

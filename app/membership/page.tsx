@@ -2,9 +2,9 @@
 
 import { GetPageTitle, FavIcon } from "../../constants"
 import TopNav from "@/components/TopNav";
-import MMNContainer from "@/components/Container";
+import MMNContainer from "@/components/MMNContainer";
 import BlogPane from "./BlogPane";
-import MMNButton from "@/components/Button";
+import MMNButton from "@/components/MMNButton";
 import GoogleButton from "@/components/GoogleButton";
 import RenewMemberCard from "./RenewMemberCard";
 import { useRouter } from "next/navigation";

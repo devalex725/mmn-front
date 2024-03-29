@@ -64,7 +64,7 @@ export default function FamilyInfoPane(params: Props) {
                         controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !leading-[24px]"
                         arrowClassName={"!right-[27px] !top-[27px]"}
                         onChange={(e) => { handleOnChange("gender", e.value) }}
-                        value={member?.gender}
+                        value={member?.gender || ""}
                         placeholder={"Select your Gender"} />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default function FamilyInfoPane(params: Props) {
                         controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !leading-[24px]"
                         arrowClassName={"!right-[27px] !top-[27px]"}
                         onChange={(e) => { handleOnChange("relation", e.value) }}
-                        value={member?.gender}
+                        value={member?.gender || ""}
                         placeholder={"Select Relation"} />
                 </div>
             </div>

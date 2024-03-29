@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { GetPageTitle, FavIcon } from "../../constants";
-import MMNContainer from "@/components/Container";
+import MMNContainer from "@/components/MMNContainer";
 import AboutPane from "./AboutPane";
 import VolunteerCard from "./VoluteerCard";
 import LoginCard from "./LoginCard";

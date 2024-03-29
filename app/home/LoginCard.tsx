@@ -1,12 +1,12 @@
-import MMNTitle1 from "@/components/TItle-1";
-import MMNPanel from "@/components/Panel";
-import MMNButton from "@/components/Button";
+import MMNTitle from "@/components/MMNTItle";
+import MMNPanel from "@/components/MMNPanel";
+import MMNButton from "@/components/MMNButton";
 import GoogleButton from "@/components/GoogleButton";
 
 export default function LoginCard(){
     return (
         <MMNPanel className="">
-            <MMNTitle1 title="Already member?" color="purple" />
+            <MMNTitle title="Already member?" color="purple" />
             <GoogleButton title="Log in with Google" className="max-w-full"/>
             <div className="font-bold leading-[28px] text-center">
                 OR

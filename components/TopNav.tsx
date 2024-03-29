@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import MMNContainer from "./Container";
+import MMNContainer from "./MMNContainer";
 
 interface Item {
     title: string,

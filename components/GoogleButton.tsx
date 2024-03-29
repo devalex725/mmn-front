@@ -14,7 +14,7 @@ const GoogleButton = (params: Props) => {
       onClick={() => {}}
     >
       <Image
-        src={"/image/Google Logo.jpg"}
+        src={"/image/logo/GoogleLogo.jpg"}
         alt="google"
         width={24}
         height={24}

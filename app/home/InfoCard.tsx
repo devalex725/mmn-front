@@ -1,5 +1,5 @@
 
-import MMNButton from "@/components/Button";
+import MMNButton from "@/components/MMNButton";
 
 interface Props {
     className?:string, 
