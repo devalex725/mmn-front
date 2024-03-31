@@ -66,7 +66,7 @@ export default function Paypane(params: Props) {
                 <div onClick={() => setIsOpenModal(true)}>
                     <MMNButton title="+ Add family member" color="white" className={"w-full border-[1px] border-color-mmn-purple"} />
                 </div>
-                <div className="flex justify-between font-semibold text-color-mmn-purple">
+                <div className="flex justify-between font-semibold text-color-mmn-purple items-center">
                     <div className="text-size-mmn-medium line-height-mmn-medium">
                         Total payment
                     </div>

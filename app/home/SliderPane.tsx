@@ -55,7 +55,7 @@ const SliderItem = (item: Item, index: number) => {
 				/>
 			</div>
 			<MMNContainer className="flex-col z-[3] relative">
-				<div className="pt-[40px] pb-[20px] flex flex-col gap-[26px]">
+				<div className="sm:pt-[40px] pt-[5px] pb-[20px] flex flex-col gap-[26px]">
 					<div className="w-full h-[36px]"></div>
 					<div className="grid xl:grid-cols-2 grid-cols-1 gap-[40px]">
 						<div className="xl:block hidden">

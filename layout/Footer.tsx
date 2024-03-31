@@ -44,7 +44,7 @@ export default function FooterBar(){
 
     return (
         <div className="w-full py-[40px] border-t-[1px] border-color-mmn-lightgrey bg-[#F1F1F1]">
-            <div className="w-full px-[90px] grid sm:grid-cols-2 md:grid-cols-4 grid-col-1 gap-[40px]">
+            <div className="w-full px-[90px] grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-col-1 gap-[40px]">
                 { RenderItem }
             </div>
         </div>

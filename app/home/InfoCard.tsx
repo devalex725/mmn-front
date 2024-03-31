@@ -24,11 +24,13 @@ export default function InfoCard(params:Props){
                     <h1 className="font-normal"> {params.event.year} </h1>
                 </div>
 
-                <div className="flex gap-[10px] line-height-mmn-normal items-center flex-wrap">
+                <div className="flex flex-col sm:flex-row gap-[10px] line-height-mmn-normal sm:items-center items-start flex-wrap">
+                    <div>
                     <span className="">Date: </span>
                     <span className="font-bold"> {params.event.date} </span>
+                    </div>
                     <div>
-                        <MMNButton title="The date is tentative. Stay tuned for further details..." size="small" color="white"/>
+                        <MMNButton title="The date is tentative. Stay tuned for further details..." size="small" color="white" className={"!min-w-full"}/>
                     </div>
                 </div>
 
@@ -41,7 +43,7 @@ export default function InfoCard(params:Props){
                     {params.event.description}
                 </div>
 
-                <div className="flex gap-[20px]">
+                <div className="flex gap-[20px] flex-wrap">
                     <MMNButton title="Learn more" className="border-[1px] border-white text-white" size="normal"/>
                     <MMNButton title="Register for event now" color="purple"/>
                 </div>
