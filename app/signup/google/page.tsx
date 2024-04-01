@@ -20,23 +20,25 @@ const NavData = [
 ];
 
 export default function SignUpGooglePage() {
-    const router = useRouter();
-    const {data: session} = useSession();
+    const { data: session } = useSession();
+    const [member, setMember] = useState<AccountInfo | null>(null);
 
-    const defMember : AccountInfo = {
-        firstName: session?.user?.name as string,
-        email: session?.user?.email as string,
-    };
+    useEffect(() => {
+        if (!session?.user) return
+
+        setMember({
+            firstName: session.user.name || '',
+            email: session.user.email || '',
+        })
+    }, [session]);
     
-    const [member, setMember] = useState<AccountInfo | null>(defMember);
-
     return (
         <>
             <TopNav itemList={NavData} />
             <MMNContainer className="gap-[40px] pb-[40px]">
                 <div className="flex flex-col gap-[20px] grow-[2]">
                     <BlogPane />
-                    <AccountInfoPane account={defMember} setMember={setMember} />
+                    <AccountInfoPane account={member} setMember={setMember} />
 
                     <div className="line-height-mmn-large font-bold">Add family members</div>
                     <div>

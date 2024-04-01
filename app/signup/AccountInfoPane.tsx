@@ -8,11 +8,15 @@ interface Props {
     setMember: (member: AccountInfo | null) => void
 }
 
-export default function AccountInfoPane(params: Props) {
-    const [member, setMember] = useState<AccountInfo|null>(params.account);
+export default function AccountInfoPane(props: Props) {
+    const [member, setMember] = useState<AccountInfo|null>(props.account);
+    useEffect(() => {
+        setMember(props.account)
+    }, [props])
+
     const handleOnChange = (key: keyof AccountInfo, value: any) => {
         setMember(prev => ({ ...prev!, [key]: value }));
-        params.setMember(member);
+        props.setMember(member);
     }
 
     return (
