@@ -27,7 +27,7 @@ export default function MemberShipPage() {
                 <div className="flex flex-col gap-[20px] grow-[2]">
                     <BlogPane />
                     <div className="flex flex-col gap-[20px] w-max pr-[30px]">
-                        <div onClick={() => signIn("google", { redirect: false, callbackUrl: 'http://localhost:3000/signup/google' } )}>
+                        <div onClick={() => signIn("google", { redirect: false, callbackUrl: process.env.SITE_ROOT + 'signup/google' } )}>
                             <GoogleButton title={"Signup with Google"} className="max-w-full" />
                         </div>
 
@@ -37,7 +37,7 @@ export default function MemberShipPage() {
                     </div>
                 </div>
 
-                <RenewMemberCard className="max-w-[420px]" />
+                <RenewMemberCard className="w-full sm:max-w-[420px]" />
             </MMNContainer>
         </>
     );

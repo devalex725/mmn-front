@@ -14,11 +14,14 @@ const GoogleButton = (params: Props) => {
       onClick={() => {}}
     >
       <Image
-        src={"/image/logo/GoogleLogo.jpg"}
-        alt="google"
-        width={24}
-        height={24}
-      />
+                src={"/image/logo/GoogleLogo.jpg"}
+                alt="googlelogo"
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-[24px] h-auto"
+                />
+      
       <h3 className="text-size-mmn-large text-color-mmn-grey font-roboto">
         { params.title }
       </h3>

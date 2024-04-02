@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface Item {
@@ -15,21 +15,25 @@ interface Props {
     callback?: Function
 }
 
-export default function SubMenuItem(params: Props) {
+export default function SubMenuItem({ item }: Props) {
     const router = useRouter();
-
+    
     const [popupFlag, setPopupFlag] = useState(false);
 
-    const items = params.item.subItems;
-    const title = params.item.title;
-    const parentPath = params.item.link;
+    const items = item.subItems;
+    const title = item.title;
+    const parentPath = item.link;
+    const [link, setLink] = useState<string>("");
 
     const handleClick = (subItem:Item) => {
-        router.push(parentPath + subItem.link);
+        if(subItem.link)
+            router.push(parentPath + subItem.link);
+        setPopupFlag(false);
     }
-
+    
     return (
-        <div className={`flex relative px-[30px] py-[15px] border-b-[2px] rounded-b-[6px] cursor-pointer bg-white border-white z-[100]`}
+        <div className={`flex relative px-[30px] py-[15px] border-b-[2px] rounded-b-[6px] cursor-pointer z-[100]
+        ${ item.link && link.startsWith(item.link) ? "text-white bg-mmn-red border-[#FFC5B9]" : "bg-white border-white" }`}
             onMouseOver={e => setPopupFlag(true)}
             onMouseLeave={e => setPopupFlag(false)}
         >

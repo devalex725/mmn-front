@@ -11,6 +11,7 @@ export interface FamilyAccountInfo {
 export interface AccountInfo extends FamilyAccountInfo {
     mobile?: string | null,
     country?: string | null,
+    id_token?: string | null
 }
 
 export const Genders = [

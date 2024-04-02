@@ -60,7 +60,7 @@ export default function RenewMemberCard(params: Props) {
             {
                 account == undefined ?
                     <div className="flex justify-end" onClick={handleRenewNowClick}>
-                        <MMNButton title="Renew membership now" color="purple"/>
+                        <MMNButton title="Renew membership now" color="purple" className={"w-full sm:w-max"}/>
                     </div>
                     : <Paypane account={account}/>
             }

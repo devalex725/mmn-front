@@ -14,7 +14,7 @@ interface Props{
 
 export default function TopNav(params: Props) {
     const itemList = params.itemList;
-    if(itemList == undefined) return;
+    if(itemList == undefined) return null;
 
     const count: number = itemList.length;
 

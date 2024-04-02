@@ -53,7 +53,7 @@ const memberCard = (member: CommitteeMember) => {
 
 const memberList = (members: CommitteeMember[]) => {
   return (
-    <div className='flex gap-[30px] flex-wrap'>
+    <div className='flex gap-[30px] flex-wrap justify-center sm:justify-start'>
       {
         members.map((member, index) => {
           return (
@@ -81,17 +81,16 @@ const CommitteeMemberPage = () => {
       </div>
 
       <div className="flex flex-col sm:px-[90px] px-5 gap-[30px] pb-[40px] text-size-mmn-medium">
-        <div className='flex gap-[20px] items-center'>
+        <div className='flex gap-[20px] items-start sm:items-center flex-col sm:flex-row'>
           <MMNTitle title={"Working committee members"} className={""} color='purple' />
-
-          <DropDown options={yearList}
-            controlClassName="text-size-mmn-medium font-semibold line-height-mmn-medium text-color-mmn-yellow !rounded-[6px] !pl-[12px] !pr-[32px] bg-[#FFEDEA] !border-none cursor-pointer"
-            menuClassName='text-size-mmn-medium font-semibold line-height-mmn-medium border-none '
-            arrowClassName='top-[18px] right-[10px]'
-            value={'2024'}
-            onChange={() => { }}
-            placeholder={"Select Year"} />
-
+            <DropDown options={yearList}
+              className='w-fit'
+              controlClassName="text-size-mmn-medium font-semibold line-height-mmn-medium text-color-mmn-yellow !rounded-[6px] !pl-[12px] !pr-[32px] bg-[#FFEDEA] !border-none cursor-pointer"
+              menuClassName='text-size-mmn-medium font-semibold line-height-mmn-medium border-none '
+              arrowClassName='top-[18px] right-[10px]'
+              value={'2024'}
+              onChange={() => { }}
+              placeholder={"Select Year"} />
         </div>
 
         {workingMemberList}

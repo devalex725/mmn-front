@@ -10,12 +10,13 @@ import SliderPane from "./SliderPane";
 const title = GetPageTitle("Home");
 
 
-export default function MemberShipPage(){
+export default function MemberShipPage() {
     return (
         <>
             <SliderPane />
-            <AboutPane />
-            <MMNContainer>
+            <MMNContainer className="flex-col">
+                <AboutPane />
+
                 <div className="xl:grid xl:grid-cols-3 gap-[40px] pb-[40px] flex flex-col">
                     <VolunteerCard />
                     <LoginCard />

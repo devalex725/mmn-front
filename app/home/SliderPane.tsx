@@ -45,13 +45,14 @@ const SliderItem = (item: Item, index: number) => {
 	return (
 		<div className={`relative w-full ${item.className || ""}`} key={index}>
 			<div className="xl:block hidden">
-				<div className={`absolute top-0 left-0 z-[2] w-[878px] h-full ${item.imageClassName}`}></div>
+				<div className={`absolute top-0 left-0 z-[2] w-[878px] h-full xl:block hidden ${item.imageClassName}`}></div>
 				<Image
 					src={item.image}
 					alt="hero"
-					width={878}
-					height={512}
-					className="absolute top-0 left-0 z-[1] h-full"
+					width={0}
+					height={0}
+					sizes="100vw"
+					className="absolute top-0 left-0 z-[1] h-full w-[878px]"
 				/>
 			</div>
 			<MMNContainer className="flex-col z-[3] relative">
@@ -76,6 +77,8 @@ const setting = {
 	speed: 500,
 	slidesToShow: 1,
 	slidesToScroll: 1,
+	arrows: false, 
+	dotsClass: "slick-dots bottom-[20px]"
 }
 
 export default function SliderPane() {

@@ -11,7 +11,7 @@ export default function PaymentCard() {
                 <div className="font-bold text-[18px]">kr 160</div>
             </div>
 
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2 grid-cols-1">
                 <div></div>
                 <MMNButton title="Proceed payment" color="white" className={"min-w-max"} />
             </div>

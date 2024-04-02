@@ -1,22 +1,26 @@
-import { useEffect, useState } from "react"
-
+import { useCallback, useEffect, useState } from "react"
 import DropDown from 'react-dropdown';
 import { AccountInfo, Genders, CountryList } from "@/constants/types";
+import _ from "lodash"
 
 interface Props {
-    account: AccountInfo | null, 
+    account: AccountInfo | null,
     setMember: (member: AccountInfo | null) => void
 }
 
 export default function AccountInfoPane(props: Props) {
-    const [member, setMember] = useState<AccountInfo|null>(props.account);
+    const [member, setMember] = useState<AccountInfo | null>(props.account);
+
     useEffect(() => {
         setMember(props.account)
     }, [props])
 
+    const debounceFn = useCallback(_.debounce(props.setMember, 1000), []);
+
     const handleOnChange = (key: keyof AccountInfo, value: any) => {
-        setMember(prev => ({ ...prev!, [key]: value }));
-        props.setMember(member);
+        const newMember = { ...member, [key]: value || '' } as AccountInfo
+        setMember(newMember)
+        debounceFn(newMember);
     }
 
     return (
@@ -31,7 +35,7 @@ export default function AccountInfoPane(props: Props) {
                         onChange={e => handleOnChange("firstName", e.target.value)}
                     />
                 </div>
-                
+
                 <div>
                     <div className="pb-[5px]">Last name*</div>
                     <input type="text" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full"
@@ -58,11 +62,13 @@ export default function AccountInfoPane(props: Props) {
                         onChange={e => handleOnChange("email", e.target.value)}
                     />
                 </div>
-                
+
                 <div>
                     <div className="pb-[5px]">Mobile no *</div>
                     <input type="text" className="px-[14px] py-[16px] border-[1px] border-color-mmn-grey rounded-[6px] line-height-mmn-medium w-full"
                         placeholder="+123456789"
+                        value={member?.mobile || ''}
+                        onChange={e => handleOnChange("mobile", e.target.value)}
                     />
                 </div>
 
@@ -71,8 +77,8 @@ export default function AccountInfoPane(props: Props) {
                     <DropDown options={CountryList}
                         controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !line-height-mmn-medium"
                         arrowClassName={"!right-[27px] !top-[27px]"}
-                        onChange={(e) => { handleOnChange("country", e.value) }}
                         value={member?.country || ""}
+                        onChange={(e) => { handleOnChange("country", e.value) }}
                         placeholder={"Select Kommune"} />
                 </div>
 
@@ -81,8 +87,8 @@ export default function AccountInfoPane(props: Props) {
                     <DropDown options={Genders}
                         controlClassName="!rounded-[6px] !pl-[14px] !py-[16px] !line-height-mmn-medium"
                         arrowClassName={"!right-[27px] !top-[27px]"}
-                        onChange={(e) => { handleOnChange("gender", e.value) }}
                         value={member?.gender || ""}
+                        onChange={(e) => { handleOnChange("gender", e.value) }}
                         placeholder={"Select your Gender"} />
                 </div>
             </div>

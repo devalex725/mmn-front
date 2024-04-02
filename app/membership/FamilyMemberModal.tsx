@@ -8,11 +8,9 @@ import MMNTitle from "@/components/MMNTItle";
 import Modal from 'react-modal';
 
 const customStyles = {
-    content: { width: '50%', margin: 'auto', padding: '40px', height: 'max-content' },
+    content: { width: '60%', margin: 'auto', padding: '40px', height: 'max-content' },
     overlay: { zIndex: 1000 }
 };
-
-Modal.setAppElement('#modal-container');
 
 interface FamilyMemberModalProps {
     open: boolean
@@ -21,7 +19,7 @@ interface FamilyMemberModalProps {
 }
 
 export default function FamilyMemberModal({ open, onClose, onSave }: FamilyMemberModalProps) {
-    
+    Modal.setAppElement('#modal-container');  
     let member: FamilyAccountInfo | null = null;
 
     const setMember = (_member: FamilyAccountInfo | null) => {
